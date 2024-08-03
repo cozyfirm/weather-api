@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Log;
 class HumidityController extends Controller{
     use ResponseTrait;
     protected int $interval = 15;
-    protected int $hours = 24;
+    protected int $hours = 2;
 
     public function index(Request $request): JsonResponse{
         try{
@@ -53,9 +53,8 @@ class HumidityController extends Controller{
 
             return $this->apiResponse('0000', __('Success'), $data);
         }catch (\Exception $e){
-            dd($e);
             Log::debug($e->getCode() . ': ' . $e->getMessage());
-            return $this->apiResponse('2000', __('Error'));
+            return $this->apiResponse('2100', __('Error'));
         }
     }
 }

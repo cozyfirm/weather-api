@@ -15,7 +15,7 @@ class StationsController extends Controller{
         try{
             return $this->apiResponse('0000', __('Success'), Station::get(['id', 'title', 'description'])->toArray());
         }catch (\Exception $e){
-            return $this->apiResponse('2000', __('Error'));
+            return $this->apiResponse('1000', __('Error'));
         }
     }
 }

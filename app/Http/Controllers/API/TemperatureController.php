@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Log;
 class TemperatureController extends Controller{
     use ResponseTrait;
     protected int $interval = 15;
-    protected int $hours = 24;
+    protected int $hours = 2;
 
     public function index(Request $request): JsonResponse{
         try{

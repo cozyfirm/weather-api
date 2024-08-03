@@ -1,9 +1,9 @@
-# Fetch temperature data
+# Fetch humidity data
 
-This endpoint is used to fetch temperature samples, using route
+This endpoint is used to fetch humidity samples, using route
 
 ```http
-POST /api/weather/temperature
+POST /api/weather/humidity
 ```
 
 | Parameter   | Type | Description                                                |
@@ -16,10 +16,10 @@ POST /api/weather/temperature
 **Note**: This API is supported in sample version **(No authorisation needed!)**:
 
 ```http
-GET /api/samples/weather/temperature
+GET /api/samples/weather/humidity
 ```
 
-with default params:
+with default params: 
 
 | Key         | value |
 |:------------|:------|
@@ -34,8 +34,7 @@ API returns the following status codes in its API:
 | Status Code | Description                                    |
 |:------------|:-----------------------------------------------|
 | 0000        | **OK**                                         |
-| 2000        | **Error**: Global error.                       |
-
+| 2100        | **Error**: Global error.                       |
 
 ## Example of success response
 
@@ -57,9 +56,9 @@ For input data given as:
             "date": "2024-08-03",
             "time": "17:15:00",
             "temperature": {
-                "id": 43,
-                "temperature": "38.00",
-                "unit": "°C",
+                "id": 41,
+                "humidity": "33.00",
+                "unit": "%",
                 "date": "2024-08-03",
                 "time": "17:15:00",
                 "station": 1,
@@ -75,8 +74,8 @@ For input data given as:
             "time": "16:45:00",
             "temperature": {
                 "id": 11,
-                "temperature": "37.00",
-                "unit": "°C",
+                "humidity": "34.00",
+                "unit": "%",
                 "date": "2024-08-03",
                 "time": "16:45:00",
                 "station": 1,

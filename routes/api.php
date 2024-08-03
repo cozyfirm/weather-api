@@ -54,5 +54,23 @@ Route::prefix('/weather')->middleware('api-auth')->group(function (){
 
     Route::prefix('/humidity')->group(function (){
         Route::post('/',                                     [HumidityController::class, 'index'])->name('api.weather.humidity');
+        Route::get ('/fetch',                                [HumidityController::class, 'index'])->name('api.weather.humidity-get');
+    });
+});
+
+/**
+ *  Get routes; Used as simple samples; No authorisation needed
+ */
+Route::prefix('/samples/weather/')->group(function (){
+    Route::prefix('/stations')->group(function (){
+        Route::get ('/',                                     [StationsController::class, 'index'])->name('api.samples.weather.stations');
+    });
+
+    Route::prefix('/temperature')->group(function (){
+        Route::get ('/',                                     [TemperatureController::class, 'index'])->name('api.samples.weather.temperature');
+    });
+
+    Route::prefix('/humidity')->group(function (){
+        Route::get ('/',                                     [HumidityController::class, 'index'])->name('api.samples.weather.humidity');
     });
 });
