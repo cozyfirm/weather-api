@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\DeviceController;
+use App\Http\Controllers\API\HumidityController;
 use App\Http\Controllers\API\StationsController;
 use App\Http\Controllers\API\TemperatureController;
 use Illuminate\Http\Request;
@@ -49,5 +50,9 @@ Route::prefix('/weather')->middleware('api-auth')->group(function (){
 
     Route::prefix('/temperature')->group(function (){
         Route::post('/',                                     [TemperatureController::class, 'index'])->name('api.weather.temperature');
+    });
+
+    Route::prefix('/humidity')->group(function (){
+        Route::post('/',                                     [HumidityController::class, 'index'])->name('api.weather.humidity');
     });
 });
