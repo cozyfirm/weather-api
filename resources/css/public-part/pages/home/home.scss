@@ -1,0 +1,63 @@
+.slider{
+    position: relative; left: 0px; width: 100%; // height: calc(80% - 80px);
+    height: auto; display: flex; padding: 128px 0px; padding-bottom: 0px;
+    .right__img{
+        position: absolute; right: 0px; top: 0px; height: 400px;
+    }
+
+    .slider__inner{
+        display: flex; align-items: center; height: 100%;
+        .slider__inner_center{
+            width: 100%; min-height: 120px;display: flex; justify-content: space-between; gap: 32px;
+
+            .slider__left__line{
+                width: 32px;display: flex; position: relative;flex-wrap: wrap; justify-content: center; align-content: flex-start; gap: 8px;
+                .circle__wrapper{
+                    width: 100%; display: flex; justify-content: center; height: 16px;
+                    .circle__{
+                        width: 6px; height: 6px; border: 2px solid $txtClr2; border-radius: 50%; opacity: 0.3;
+                    }
+                }
+                .line__{
+                    position: relative; width: 3px; height: 120px; // height: 100%;
+                }
+                .line__top{ background: linear-gradient(transparent, $brownClr 30%); height: 160px; }
+                .line__bottom{ background: linear-gradient($brownClr, #2DA44E 80%, #3FB950); height: 272px; }
+                .middle__icon{
+                    position: relative; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+                    img{
+                        height: 16px;
+                    }
+                }
+            }
+            .slider__right__text{
+                width: calc(100% - 64px);
+
+                h1{
+                    font-size: 80px; color: $txtClr2;
+                }
+                h4{color:$muted; font-weight: 400;}
+
+                .forms__wrapper{
+                    width: 100%; height: 40px; margin: 64px 0px; display: flex; gap: 0px;
+                    input{
+                        border: none; background: $white; height: calc(100% - 0px); min-width: 400px; padding: 0px 16px;
+                        border-top-left-radius: 3px; border-bottom-left-radius: 3px; margin-right:0px;
+                    }
+                    button{
+                        height: 100%; background: $brownClr; color: $white; border: 0px; margin-left:0px;
+                        font-family: 'Inter', sans-serif; font-weight: 600; padding: 0px 64px; font-size:16px;
+
+                        border-top-right-radius: 3px; border-bottom-right-radius: 3px;
+                    }
+                }
+                .technologies__wrapper{
+                    width: 100%; height: 40px; display: flex; gap: 64px; margin-top: 16px; padding-bottom: 128px;
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

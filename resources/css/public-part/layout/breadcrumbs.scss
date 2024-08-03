@@ -1,0 +1,40 @@
+.breadcrumbs_wrapper{
+    position: relative; position: relative; width: 100%; padding-bottom: 16px; background: #F7F8F9; padding-top: 6px;
+
+    .breadcrumbs_inner{
+        position: relative; left: calc(50% - $container-half); width: $container-width; display: flex; justify-content: space-between;
+        .bi__links{
+            position: relative; display: flex; gap: 16px; align-items: center; padding: 8px 0px;
+
+            a{
+                display: flex; margin: 0px; color: grey; gap: 8px; text-decoration: none; font-weight: lighter; font-size: 15px;
+                .fa-home, .fa-city{
+                    margin-top: 1px;
+                }
+            }
+        }
+        .bi_icons{
+            display: flex; justify-content: flex-end; gap: 8px;
+            .bi_icon_wrapper{
+                height: 30px; width: 30px; border: 1px solid rgba(0,0,0,0.1); border-radius: 3px; display: flex; justify-content: center; align-items: center;
+                color: #333333; text-decoration: none; transition: 0.2s all;
+                i{
+                    text-decoration: none; text-underline: none;
+                }
+            }
+            .bi_icon_wrapper:hover{
+                color: $primary; border:1px solid $primary; cursor: pointer;
+            }
+        }
+
+        @media only screen and (max-width: 1400px){
+            left: 40px; width: calc(100% - 80px);
+        }
+        @media only screen and (max-width: 800px){
+            left: 20px; width: calc(100% - 40px);
+        }
+    }
+}
+@media only screen and (max-width: 800px){
+    .breadcrumbs_wrapper{display: none;}
+}

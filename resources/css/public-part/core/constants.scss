@@ -1,0 +1,43 @@
+$container-width : 1400px;
+$container-half  : 700px;
+
+/**
+ *  Colors
+ */
+
+$primary : #01C0CF;
+$secondary : #FF0233;
+$tertiary: #054677;
+$dark: #2F2C2F;
+$white: #F6F7F8;
+$muted: #636c76;
+$brownClr: #8A7368;
+
+$txtClr: #0d1117;
+$txtClr2: #E6EDF3;
+$bcgClr: #0d1117;
+
+
+
+@font-face {
+    font-family: 'MonaSansLight';
+    src: url('../../fonts/MonaSans/MonaSansCondensed-Light.ttf');
+}
+
+
+p, a{
+    font-family: 'MonaSansLight', sans-serif; // letter-spacing: -0.4px; font-size: 15px;
+    margin: 0px; // font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Inter', sans-serif; margin: 0px; font-weight: 500;
+    // font-family: 'MonaSansLight', sans-serif; margin: 0px;
+}
+
+h1{font-size: 42px;}
+h2{font-size: 36px;}
+h3{font-size: 32px;}
+h4{font-size: 24px}
+h5{font-size: 20px;}
+h6{font-size: 18px;}
